@@ -110,18 +110,18 @@ input {
 	font: inherit;
 	display: block;
 	width: 100%;
-  font-size: 1.6rem;
+	font-size: 1.6rem;
 	padding: 0.75rem 0.5rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--color);
+	border-radius: 0.5rem;
+	border: 1px solid var(--color);
 }
 
 input:focus {
-  outline: 2px solid var(--color);
+	outline: 2px solid var(--color);
 }
 
 label {
-  display: block;
+	display: block;
 	font-size: 1.5rem;
 	font-weight: 600;
 	margin-bottom: 0.7rem;
@@ -129,19 +129,83 @@ label {
 	letter-spacing: 3px;
 }
 
+label::after{
+	content: '*';
+	color: red;
+}
+
 .form_input {
 	margin-bottom: 1.6rem;
 }
 
-
 button[type="submit"] {
-  background-color: var(--color);
-  color: white;
-  font-size: 1.6rem;
-  padding: 1rem 3.5rem;
-  border-radius: 0.5rem;
+	background-color: var(--color);
+	color: white;
+	font-size: 1.6rem;
+	padding: 1rem 3.5rem;
+	border-radius: 0.5rem;
 }
 
 p > a {
-  color: var(--color);
+	color: var(--color);
+}
+
+@media screen and (max-width: 885px) {
+	.container > div {
+		width: 80%;
+		margin: 50px auto;
+		display: grid;
+		border-radius: 1rem;
+	}
+
+	h1 {
+		font-size: 5rem;
+	}
+
+	.img_div {
+		height: 300px;
+		width: 100%;
+		border-radius: 1rem 1rem 0 0;
+	}
+
+	.img_container {
+		padding-block: 0.7rem;
+	}
+
+	img {
+		height: 60px;
+		width: 60px;
+	}
+
+	.form_div {
+		width: 100%;
+		padding-inline: 2rem;
+	}
+
+	.form_content p {
+		margin-block: 2.5rem;
+		font-size: 1.5rem;
+	}
+
+	.form_content p:nth-of-type(2) {
+		margin-bottom: 2.5rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.password.fields {
+		grid-template-columns: 1fr;
+		gap: 0rem;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.fields {
+		grid-template-columns: 1fr;
+		gap: 0rem;
+	}
 }
