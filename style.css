@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@font-face {
+	font-family: "Norse Bold";
+	src: url("./Norse-Bold.otf") format("opentype");
+}
+
+:root {
+	--color: #596d48;
+	--color-2: #e5e7eb;
+}
+
+/* CSS RESET */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	background-color: #f5f5f5;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+html {
+	font-size: 10px;
+}
+
+/* CSS RESET END */
+.container > div {
+	display: flex;
+	height: 100vh;
+}
+
+.img_div {
+	background: url("./bg-leaf.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40vw;
+	position: relative;
+}
+
+.img_container {
+	position: absolute;
+	top: 25%;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.65);
+	padding-block: 1rem;
+	display: flex;
+	gap: 1.25rem;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	font-size: 7rem;
+	letter-spacing: 0.2rem;
+	font-family: "Norse Bold";
+}
+
+.form_div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60vw;
+	padding-inline: 6rem;
+}
+
+.form_content p {
+	margin-block: 2.5rem;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.form_content p:nth-of-type(2) {
+	margin-right: 0;
+	margin-bottom: 5rem;
+}
+
+h3 {
+	font-size: 3rem;
+	margin-bottom: 1.5rem;
+	font-weight: 700;
+	color: hsl(215, 28%, 17%);
+}
+
+.fields {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+}
+
+input {
+	font: inherit;
+	display: block;
+	width: 100%;
+  font-size: 1.6rem;
+	padding: 0.75rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color);
+}
+
+input:focus {
+  outline: 2px solid var(--color);
+}
+
+label {
+  display: block;
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 0.7rem;
+	color: hsl(215, 28%, 17%);
+	letter-spacing: 3px;
+}
+
+.form_input {
+	margin-bottom: 1.6rem;
+}
+
+
+button[type="submit"] {
+  background-color: var(--color);
+  color: white;
+  font-size: 1.6rem;
+  padding: 1rem 3.5rem;
+  border-radius: 0.5rem;
+}
+
+p > a {
+  color: var(--color);
+}
